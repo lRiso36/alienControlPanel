@@ -22,7 +22,7 @@ body {
     position: relative;
     height: 220px;
     width: 420px;
-    background-image: url(alienScreen1.jpeg);
+    background-image: url(images/alienScreen1.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -52,7 +52,7 @@ body {
 .rightScreen {
     height: 220px;
     width: 150px;
-    background-image: url(settingsPanel.png);
+    background-image: url(images/settingsPanel.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
