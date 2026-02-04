@@ -17,6 +17,7 @@ body {
     height: 400px;
     width: 600px;
     border-radius: 30px;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
 }
 .screens {
     display: flex;
