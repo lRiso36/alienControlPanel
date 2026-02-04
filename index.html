@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Panel</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="screens">
+            <section class="leftScreen" id="leftScreen"></section>
+            <section class="rightScreen" id="rightScreen"></section>
+        </div>
+        <div class="buttons">
+            <div class="flat-buttons">
+                <button class="flatBtn" id="ejectBtn">Eject</button>
+                <button class="flatBtn" id="levelBtn">Level</button>
+                <button class="flatBtn" id="callBtn">Call</button>
+                <button class="flatBtn" id="routeBtn">Route</button>
+                <button class="flatBtn"id="pinBtn">Pin</button>
+                <!-- <button class="flatBtn"></button> -->
+            </div>
+            <div class="round-buttons">
+                <button class="roundBtn"></button>
+                <button class="roundBtn"></button>
+                <button class="roundBtn"></button>
+                <button class="roundBtn"></button>
+                <button class="roundBtn"></button>
+                <button class="roundBtn"></button>
+                <button class="roundBtn"></button>
+                <button class="roundBtn"></button>
+                <button class="roundBtn"></button>
+                <button class="roundBtn"></button>
+                <button class="roundBtn"></button>
+                <button class="roundBtn"></button>
+            </div>
+            <div class="keypad-container">
+                <div class="keypad">
+                    <button class="keyNum">1</button>
+                    <button class="keyNum">2</button>
+                    <button class="keyNum">3</button>
+                    <button class="keyNum">4</button>
+                    <button class="keyNum">5</button>
+                    <button class="keyNum">6</button>
+                    <button class="keyNum">7</button>
+                    <button class="keyNum">8</button>
+                    <button class="keyNum">9</button>
+                </div>
+                <button class="enter" id="enterBtn">Enter</button>
+            </div>
+            <div class="arrowBtn">
+                <button class="right arrow">^</button>
+                <button class="up arrow">^</button>
+                <button class="left arrow">^</button>
+                <button class="down arrow">^</button>
+            </div>
+        </div>
+    </div>
+    <audio id="ejectSound" src="Standard Emergency Warning Signal - QuickSounds.com.mp3" preload="auto"></audio>
+    <audio id="ringing" src="kim possible ringtone sound - QuickSounds.com.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>

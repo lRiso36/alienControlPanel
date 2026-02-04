@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background: rgb(160, 157, 157);
+}
+.container {
+    display: flex;
+    background: rgb(39, 39, 39);
+    flex-direction: column;
+    height: 400px;
+    width: 600px;
+    border-radius: 30px;
+}
+.screens {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5px;
+}
+.leftScreen {
+    position: relative;
+    height: 220px;
+    width: 420px;
+    background-image: url(alienScreen1.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+    border: 3px solid black;
+}
+.leftScreen.ejecting {
+    background-image: none;
+    background-color: red;
+    animation: flash 0.6s infinite;
+}
+.leftScreen.ejecting::after{
+    content: "EJECTING!";
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    font-size: 80px;
+    color: white;
+}
+
+@keyframes flash {
+    0% {opacity: 1;}
+    50% {opacity: 0.4;}
+    100% {opacity: 1;}
+}
+.rightScreen {
+    height: 220px;
+    width: 150px;
+    background-image: url(settingsPanel.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+    border: 3px solid black;
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+}   
+.flat-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    gap: 10px;
+    padding: 15px;
+    margin-left: 10px;
+}
+.flatBtn {
+    height: 20px;
+    background: rgb(178, 121, 121);
+    color: black;
+    font-weight: bold;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+}
+.round-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 20px;
+}
+.roundBtn {
+    height: 25px;
+    width: 25px;
+    border-radius: 12.5px;
+    background: rgb(103, 118, 85);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+.keypad-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-left: 10px;
+    background: rgb(55, 52, 52);
+    height: 150px;
+    margin-top: 5px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+}
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,1fr );
+    height: 100px;
+    width: 100px;
+    gap: 10px;
+    padding: 8px;
+}
+.keyNum {
+    background: grey;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+}
+.enter {
+    height: 40px;
+    margin-left: 4px;
+    background: rgb(15, 97, 15);
+    color: white;
+    font-size: 18px;
+}
+.arrowBtn {
+    display:grid;
+    grid-template-columns: 40px 40px 40px;
+    grid-template-rows: 40px 40px 40px;
+    grid-template-areas: 
+    ".  up  ."
+    "left . right"
+    ".  down  .";
+    place-items: center;
+    background: white;
+    height: 120px;
+    width: 120px;
+    border-radius: 120px;
+    margin-left: 30px;
+    margin-top: 20px;
+    background: rgb(148, 180, 174);
+}
+.arrow {
+    all: unset; 
+    cursor: pointer;             /* 🔥 removes ALL default button styling */
+}
+.right {grid-area: right; font-size: 40px; transform: rotate(90deg);font-weight: bold;}
+.up {grid-area: up;font-size: 40px;font-weight: bold;}
+.down {grid-area: down;font-size: 40px;transform: rotate(180deg);font-weight: bold;}
+.left {grid-area: left;font-size: 40px;transform: rotate(270deg);font-weight: bold;}
