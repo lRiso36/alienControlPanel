@@ -3,6 +3,12 @@
 }
 body {
     background: rgb(160, 157, 157);
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .container {
     display: flex;
